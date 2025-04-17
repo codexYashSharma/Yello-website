@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Browse Items | YELLO</title>
+  <link rel="stylesheet" href="/css/style.css">
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: #f9fafb;
+      margin: 0;
+      padding: 0;
+    }
+
+    .container {
+      padding: 40px;
+      text-align: center;
+    }
+
+    h1 {
+      font-size: 2.2rem;
+      margin-bottom: 10px;
+      color: #111827;
+    }
+
+    p {
+      color: #6b7280;
+      margin-bottom: 40px;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 24px;
+      max-width: 1000px;
+      margin: 0 auto;
+    }
+
+    .card {
+      background: white;
+      border-radius: 12px;
+      padding: 20px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+      text-align: center;
+      transition: transform 0.2s;
+      cursor: pointer;
+    }
+
+    .card:hover {
+      transform: translateY(-4px);
+    }
+
+    .icon {
+      font-size: 32px;
+      color: #f97316;
+      margin-bottom: 10px;
+    }
+
+    .category {
+      font-weight: 600;
+      color: #111827;
+      margin-bottom: 5px;
+    }
+
+    .count {
+      color: #6b7280;
+      font-size: 14px;
+    }
+
+    .view-all {
+      color: #f97316;
+      margin-top: 30px;
+      font-weight: 500;
+      display: inline-block;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Browse by Category</h1>
+    <p>Find exactly what you're looking for from our diverse selection of categories.</p>
+    <div class="grid">
+      <div class="card">
+        <div class="icon">📦</div>
+        <div class="category">Tools</div>
+        <div class="count">48 items</div>
+      </div>
+      <div class="card">
+        <div class="icon">📺</div>
+        <div class="category">Electronics</div>
+        <div class="count">32 items</div>
+      </div>
+      <div class="card">
+        <div class="icon">📷</div>
+        <div class="category">Photography</div>
+        <div class="count">24 items</div>
+      </div>
+      <div class="card">
+        <div class="icon">🍴</div>
+        <div class="category">Kitchen</div>
+        <div class="count">38 items</div>
+      </div>
+      <div class="card">
+        <div class="icon">🌸</div>
+        <div class="category">Garden</div>
+        <div class="count">29 items</div>
+      </div>
+      <div class="card">
+        <div class="icon">🚴‍♂️</div>
+        <div class="category">Sports</div>
+        <div class="count">42 items</div>
+      </div>
+      <div class="card">
+        <div class="icon">🎉</div>
+        <div class="category">Party</div>
+        <div class="count">27 items</div>
+      </div>
+      <div class="card">
+        <div class="icon">👶</div>
+        <div class="category">Kids</div>
+        <div class="count">35 items</div>
+      </div>
+    </div>
+    <a class="view-all" href="#">View all categories →</a>
+  </div>
+</body>
+</html>

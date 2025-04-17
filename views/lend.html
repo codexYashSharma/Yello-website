@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Lend an Item - YELLO</title>
+  <link rel="stylesheet" href="/styles.css" />
+  <style>
+    :root {
+      --yel-orange: #FF6600;
+      --yel-white: #FFFFFF;
+      --yel-black: #000000;
+    }
+
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      margin: 0;
+      background-color: var(--yel-white);
+      color: var(--yel-black);
+    }
+
+    header {
+      background-color: var(--yel-orange);
+      padding: 1rem;
+      text-align: center;
+    }
+
+    header h1 {
+      margin: 0;
+      color: var(--yel-white);
+    }
+
+    main {
+      max-width: 650px;
+      margin: 2rem auto;
+      padding: 2rem;
+      background-color: #f5f5f5;
+      border-radius: 12px;
+      box-shadow: 0 0 12px rgba(0, 0, 0, 0.08);
+    }
+
+    h2 {
+      text-align: center;
+      color: var(--yel-black);
+      margin-bottom: 2rem;
+    }
+
+    form {
+      display: flex;
+      flex-direction: column;
+      gap: 1.4rem;
+    }
+
+    label {
+      font-weight: 600;
+      margin-bottom: 0.4rem;
+      display: block;
+      color: var(--yel-black);
+    }
+
+    input[type="text"],
+    input[type="number"],
+    select,
+    textarea {
+      width: 100%;
+      padding: 0.75rem;
+      font-size: 1rem;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      box-sizing: border-box;
+    }
+
+    .image-upload {
+      border: 2px dashed var(--yel-orange);
+      background-color: #fff3ea;
+      padding: 1rem;
+      text-align: center;
+      border-radius: 6px;
+      color: var(--yel-orange);
+      font-weight: bold;
+      cursor: pointer;
+      transition: 0.3s ease;
+    }
+
+    .image-upload:hover {
+      background-color: #ffe5d1;
+    }
+
+    input[type="file"] {
+      display: none;
+    }
+
+    input[type="submit"] {
+      background-color: var(--yel-orange);
+      color: var(--yel-white);
+      font-weight: bold;
+      border: none;
+      padding: 0.9rem;
+      font-size: 1rem;
+      border-radius: 6px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    input[type="submit"]:hover {
+      background-color: #f4b388;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>YELLO - Lend an Item</h1>
+  </header>
+  <main>
+    <h2>List Your Item for Rent</h2>
+    <form action="/lend" method="POST" enctype="multipart/form-data">
+      <div>
+        <label for="name">Item Name</label>
+        <input type="text" id="name" name="name" required />
+      </div>
+      <div>
+        <label for="category">Category</label>
+        <select id="category" name="category" required>
+          <option value="">-- Select --</option>
+          <option value="tools">Tools</option>
+          <option value="electronics">Electronics</option>
+          <option value="photography">Photography</option>
+          <option value="kitchen">Kitchen</option>
+          <option value="garden">Garden</option>
+          <option value="sports">Sports</option>
+          <option value="party">Party</option>
+          <option value="kids">Kids</option>
+        </select>
+      </div>
+      <div>
+        <label for="description">Description</label>
+        <textarea id="description" name="description" rows="4" required></textarea>
+      </div>
+      <div>
+        <label for="price">Price per Day (₹)</label>
+        <input type="number" id="price" name="price" required />
+      </div>
+      <div>
+        <label for="rating">Rating (1–5)</label>
+        <input type="number" id="rating" name="rating" min="1" max="5" required />
+      </div>
+      <div>
+        <label for="available">Availability</label>
+        <input type="text" id="available" name="available" placeholder="e.g. Mon–Fri, 9am–6pm" required />
+      </div>
+      <div>
+        <label for="image">Upload Image</label>
+        <div class="image-upload" onclick="document.getElementById('image').click();">
+          📸 Click to choose an image
+        </div>
+        <input type="file" id="image" name="image" accept="image/*" required />
+      </div>
+      <input type="submit" value="Submit Item" />
+    </form>
+  </main>
+</body>
+</html>

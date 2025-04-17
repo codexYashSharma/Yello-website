@@ -1,0 +1,342 @@
+<!-- views/index.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>YELLO - Rent Everything</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="/css/styles.css" />
+</head>
+<body class="bg-gradient-to-br from-orange-50 to-white text-black">
+
+    <!-- Header Section -->
+<header class="w-full flex justify-between items-center px-6 py-4 shadow-sm bg-white fade-in">
+    <!-- Logo -->
+    <div class="text-xl font-bold text-orange-600">YELLO</div>
+  
+    <!-- Navigation -->
+    <nav class="hidden md:flex space-x-6 text-sm font-medium text-gray-800">
+        <a href="#browse-items" class="hover:text-orange-600">Browse Items</a>
+        <a href="#how-it-works" class="hover:text-orange-600">How it Works</a>
+        <a href="#list-an-item" class="hover:text-orange-600">List an Item</a>
+        <a href="#community" class="hover:text-orange-600">Community</a>
+        <a href="#pricing" class="hover:text-orange-600">Pricing</a>
+        <a href="#faqs" class="hover:text-orange-600">FAQs</a>
+      </nav>
+            
+  
+    <!-- Right-side Icons -->
+    <div class="flex items-center space-x-4">
+      <!-- Theme Toggle Button -->
+      <button id="theme-toggle" class="w-8 h-8 bg-orange-300 rounded-full flex items-center justify-center hover:bg-orange-400 transition" title="Toggle Theme">
+        🌙
+      </button>
+  
+      <!-- Login Icon -->
+      <button onclick="window.location.href='/login'" class="w-8 h-8 bg-orange-300 rounded-full flex items-center justify-center hover:bg-orange-400 transition" title="Login">
+        🔐
+      </button>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+<div id="browse-items" class="text-center px-4 mt-12 fade-in">
+    <h1 class="text-4xl md:text-5xl font-bold mb-10 text-black">
+      A place to Rent Anything and <span class="text-orange-600">Borrow Everything.</span>
+    </h1>
+
+    <!-- Art Cards Section -->
+    <div class="relative flex items-center justify-center mt-6 fade-in">
+      <div class="flex">
+        <img src="https://via.placeholder.com/140x180?text=Art+1" alt="Art 1"
+             class="card-stack w-36 h-44 rounded-xl object-cover -ml-0" style="z-index: 10;">
+        <img src="https://via.placeholder.com/140x180?text=Art+2" alt="Art 2"
+             class="card-stack w-36 h-44 rounded-xl object-cover -ml-8" style="z-index: 20;">
+        <img src="https://via.placeholder.com/140x180?text=Art+3" alt="Art 3"
+             class="card-stack w-36 h-44 rounded-xl object-cover -ml-8" style="z-index: 30;">
+        <img src="https://via.placeholder.com/140x180?text=Art+4" alt="Art 4"
+             class="card-stack w-36 h-44 rounded-xl object-cover -ml-8" style="z-index: 40;">
+        <img src="https://via.placeholder.com/140x180?text=Art+5" alt="Art 5"
+             class="card-stack w-36 h-44 rounded-xl object-cover -ml-8" style="z-index: 50;">
+      </div>
+    </div>
+
+ <!-- Call to Action -->
+<div id="list-an-item" class="mt-6 space-x-4 fade-in">
+    <p>Discover, rent, and lend everyday items around you—faster, cheaper, and smarter.</p>
+    <div class="mt-6 space-x-4 fade-in">
+        <button onclick="window.location.href='/rent'" class="bg-orange-600 text-white px-6 py-2 rounded-full hover:bg-orange-700 transition">RENT</button>
+        <button onclick="window.location.href='/lend'" class="bg-white text-orange-600 border border-orange-400 px-6 py-2 rounded-full hover:bg-orange-50 transition">LEND</button>
+      </div>      
+  </div>
+
+<!-- Fundraising Info Section (Rewritten as "How It Works") -->
+<section id="how-it-works" class="mt-24 mx-4 md:mx-20 p-10 rounded-3xl bg-orange-100 fade-in">
+    <h2 class="text-2xl md:text-3xl font-semibold text-center text-black mb-12">
+      Renting and lending made simple. <br class="hidden md:block" />
+      Get started in just a few minutes.
+    </h2>
+  
+    <div class="grid md:grid-cols-3 gap-10 text-center text-black">
+      <!-- Borrow Smarter -->
+      <div class="flex flex-col items-center">
+        <div class="mb-4">
+          <img src="https://via.placeholder.com/60x60?text=🔧" alt="Borrow Smarter" />
+        </div>
+        <h3 class="font-semibold text-lg mb-2">Borrow Smarter</h3>
+        <p class="text-sm max-w-xs">
+          Save money and space by borrowing everyday items from neighbors instead of buying.
+        </p>
+      </div>
+  
+      <!-- Earn from Idle Items -->
+      <div class="flex flex-col items-center">
+        <div class="mb-4">
+          <img src="https://via.placeholder.com/60x60?text=💸" alt="Earn with Ease" />
+        </div>
+        <h3 class="font-semibold text-lg mb-2">Earn from Idle Items</h3>
+        <p class="text-sm max-w-xs">
+          Turn unused gadgets and tools into passive income by listing them on YELLO.
+        </p>
+      </div>
+  
+      <!-- Build Local Trust -->
+      <div class="flex flex-col items-center">
+        <div class="mb-4">
+          <img src="https://via.placeholder.com/60x60?text=🤝" alt="Build Trust" />
+        </div>
+        <h3 class="font-semibold text-lg mb-2">Build Local Trust</h3>
+        <p class="text-sm max-w-xs">
+          Connect with your neighborhood and build a sharing-first community around you.
+        </p>
+      </div>
+    </div>
+  </section>
+  
+ <!-- Join Our Community Section (Rewritten) -->
+<section id="community" class="mt-24 px-4 py-16 bg-white text-center fade-in relative overflow-hidden">
+    <h2 class="text-2xl md:text-3xl font-semibold text-black mb-4">
+      Join the growing community of neighbors <br class="hidden md:block" />
+      who believe in smarter, sustainable living.
+    </h2>
+    <div class="text-5xl md:text-6xl font-bold text-black my-6">
+      120,859<span class="text-4xl align-top">+</span>
+    </div>
+    <p class="text-gray-700 mb-6">users already sharing and borrowing on YELLO</p>
+    <button class="bg-black text-white px-6 py-3 rounded-full hover:bg-gray-900 transition">
+      Yes, I want to join YELLO
+    </button>
+  
+    <!-- Floating Images -->
+    <div class="absolute top-8 left-8 w-16 h-16 rounded-lg overflow-hidden">
+      <img src="https://via.placeholder.com/64x64?text=🔧" class="w-full h-full object-cover grayscale" />
+    </div>
+    <div class="absolute bottom-8 left-16 w-16 h-16 rounded-lg overflow-hidden">
+      <img src="https://via.placeholder.com/64x64?text=📷" class="w-full h-full object-cover grayscale" />
+    </div>
+    <div class="absolute top-8 right-8 w-16 h-16 rounded-lg overflow-hidden">
+      <img src="https://via.placeholder.com/64x64?text=🎮" class="w-full h-full object-cover grayscale" />
+    </div>
+    <div class="absolute bottom-8 right-16 w-16 h-16 rounded-lg overflow-hidden">
+      <img src="https://via.placeholder.com/64x64?text=💡" class="w-full h-full object-cover grayscale" />
+    </div>
+  </section>
+  
+  <!-- Meet Our Team Section (Slight Update) -->
+  <section class="mt-24 px-4 md:px-20 py-16 bg-orange-50 text-center fade-in">
+    <h2 class="text-3xl md:text-4xl font-bold text-black mb-4">Meet the team behind YELLO</h2>
+    <p class="text-gray-600 max-w-xl mx-auto mb-12">
+      We're building a platform where communities thrive by sharing — and trust, convenience, and access are just the beginning.
+    </p>
+  
+    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-10">
+      <!-- Team Member 1 -->
+      <div class="bg-white rounded-2xl p-4 shadow-md transform hover:-translate-y-2 transition duration-300 fade-in">
+        <img src="https://images.unsplash.com/photo-1603415526960-f8f2f832baff?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&q=80" 
+             alt="Antonio Roberto" class="rounded-xl mb-4 mx-auto object-cover w-full h-64" />
+        <h3 class="font-semibold text-lg text-black">Antonio Roberto</h3>
+        <p class="text-sm text-gray-500">Founder & CEO</p>
+      </div>
+  
+      <!-- Team Member 2 -->
+      <div class="bg-white rounded-2xl p-4 shadow-md transform hover:-translate-y-2 transition duration-300 fade-in">
+        <img src="https://images.unsplash.com/photo-1607746882042-944635dfe10e?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&q=80" 
+             alt="Patricia Angely" class="rounded-xl mb-4 mx-auto object-cover w-full h-64" />
+        <h3 class="font-semibold text-lg text-black">Patricia Angely</h3>
+        <p class="text-sm text-gray-500">Product Manager</p>
+      </div>
+  
+      <!-- Team Member 3 -->
+      <div class="bg-white rounded-2xl p-4 shadow-md transform hover:-translate-y-2 transition duration-300 fade-in">
+        <img src="https://images.unsplash.com/photo-1550583724-b269a0c9b6d3?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&q=80" 
+             alt="Sonia Ambaratna" class="rounded-xl mb-4 mx-auto object-cover w-full h-64" />
+        <h3 class="font-semibold text-lg text-black">Sonia Ambaratna</h3>
+        <p class="text-sm text-gray-500">Marketing Lead</p>
+      </div>
+  
+      <!-- Team Member 4 -->
+      <div class="bg-white rounded-2xl p-4 shadow-md transform hover:-translate-y-2 transition duration-300 fade-in">
+        <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&q=80" 
+             alt="Yasmine Tano" class="rounded-xl mb-4 mx-auto object-cover w-full h-64" />
+        <h3 class="font-semibold text-lg text-black">Yasmine Tano</h3>
+        <p class="text-sm text-gray-500">Creative Designer</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Pricing Section -->
+<section id="pricing" class="mt-24 text-center px-4 py-16 bg-white text-black">
+    <h2 class="text-2xl font-bold mb-4">Pricing Coming Soon</h2>
+    <p class="text-gray-700">We're working on transparent and fair pricing plans for everyone.</p>
+  </section>
+  
+  
+<!-- FAQ Section -->
+<section id="faqs" class="bg-[#f7f7f3] px-6 md:px-20 py-16 text-gray-800 rounded-2xl mt-24 fade-in">
+    <div class="max-w-4xl mx-auto">
+      <div class="text-center mb-12">
+        <img src="https://cdn-icons-png.flaticon.com/512/189/189664.png" alt="FAQ Icon" class="w-12 h-12 mx-auto mb-4">
+        <h2 class="text-3xl md:text-4xl font-bold">Frequently Asked Questions</h2>
+        <p class="text-sm text-gray-600 mt-2">
+          Still have questions? Email us at 
+          <a href="mailto:hello@yelloapp.in" class="underline text-blue-500">hello@yelloapp.in</a>
+        </p>
+      </div>
+  
+      <div class="space-y-4">
+        <!-- Question 1 -->
+        <div class="border-b">
+          <button class="w-full flex justify-between items-center py-4 text-left font-semibold text-green-800 focus:outline-none toggle-faq">
+            What kind of items can I rent or borrow on YELLO?
+            <span class="transform transition-transform text-xl">+</span>
+          </button>
+          <div class="hidden text-sm text-gray-600 pb-4 pl-2">
+            You can rent or borrow anything from tools, gadgets, electronics, kitchen appliances, cameras, gaming consoles, and more — all from people in your neighborhood.
+          </div>
+        </div>
+  
+        <!-- Question 2 -->
+        <div class="border-b">
+          <button class="w-full flex justify-between items-center py-4 text-left font-semibold text-green-800 focus:outline-none toggle-faq">
+            Is it safe to rent items from strangers?
+            <span class="transform transition-transform text-xl">+</span>
+          </button>
+          <div class="hidden text-sm text-gray-600 pb-4 pl-2">
+            Yes! We verify users, offer optional insurance, and enable chat + ratings so you know who you're renting from or lending to before making a deal.
+          </div>
+        </div>
+  
+        <!-- Question 3 -->
+        <div class="border-b">
+          <button class="w-full flex justify-between items-center py-4 text-left font-semibold text-green-800 focus:outline-none toggle-faq">
+            How do I make sure my items are returned in good condition?
+            <span class="transform transition-transform text-xl">+</span>
+          </button>
+          <div class="hidden text-sm text-gray-600 pb-4 pl-2">
+            Our platform includes a deposit system, rental agreements, and user reviews to encourage safe and respectful use of all items.
+          </div>
+        </div>
+  
+        <!-- Question 4 -->
+        <div class="border-b">
+          <button class="w-full flex justify-between items-center py-4 text-left font-semibold text-green-800 focus:outline-none toggle-faq">
+            Do I need to meet in person to exchange items?
+            <span class="transform transition-transform text-xl">+</span>
+          </button>
+          <div class="hidden text-sm text-gray-600 pb-4 pl-2">
+            Typically yes, since it's a hyperlocal platform — but you can arrange pickup/dropoff directly with the other party at a time and location that works for you both.
+          </div>
+        </div>
+  
+        <!-- Question 5 -->
+        <div class="border-b">
+          <button class="w-full flex justify-between items-center py-4 text-left font-semibold text-green-800 focus:outline-none toggle-faq">
+            What happens if something gets lost or damaged?
+            <span class="transform transition-transform text-xl">+</span>
+          </button>
+          <div class="hidden text-sm text-gray-600 pb-4 pl-2">
+            We mediate disputes and support optional damage protection plans. If something goes wrong, we help ensure fair resolution for both parties.
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <!-- FAQ Toggle Script -->
+  <script>
+    document.querySelectorAll('.toggle-faq').forEach(button => {
+      button.addEventListener('click', () => {
+        const content = button.nextElementSibling;
+        const icon = button.querySelector('span');
+        content.classList.toggle('hidden');
+        icon.textContent = content.classList.contains('hidden') ? '+' : '−';
+      });
+    });
+  </script>
+
+<!-- Footer -->
+<footer class="bg-orange-100 text-black px-6 md:px-20 py-12 mt-24 rounded-t-3xl">
+    <div class="grid grid-cols-1 md:grid-cols-4 gap-10">
+      <!-- YELLO Branding -->
+      <div>
+        <h3 class="text-xl font-bold mb-4">YELLO</h3>
+        <p class="text-sm text-gray-700">
+          The hyperlocal platform to rent, lend, and borrow everyday items — safely and sustainably.
+        </p>
+      </div>
+  
+      <!-- Quick Links -->
+      <div>
+        <h4 class="font-semibold mb-3">Quick Links</h4>
+        <ul class="space-y-2 text-sm text-gray-700">
+          <li><a href="#" class="hover:underline">How it Works</a></li>
+          <li><a href="#" class="hover:underline">Community</a></li>
+          <li><a href="#" class="hover:underline">Safety</a></li>
+          <li><a href="#" class="hover:underline">FAQs</a></li>
+        </ul>
+      </div>
+  
+      <!-- Company -->
+      <div>
+        <h4 class="font-semibold mb-3">Company</h4>
+        <ul class="space-y-2 text-sm text-gray-700">
+          <li><a href="#" class="hover:underline">About Us</a></li>
+          <li><a href="#" class="hover:underline">Team</a></li>
+          <li><a href="#" class="hover:underline">Careers</a></li>
+          <li><a href="#" class="hover:underline">Contact</a></li>
+        </ul>
+      </div>
+  
+      <!-- Contact -->
+      <div>
+        <h4 class="font-semibold mb-3">Get in Touch</h4>
+        <p class="text-sm text-gray-700">
+          Email: <a href="mailto:hello@yelloapp.in" class="underline">hello@yelloapp.in</a>
+        </p>
+        <p class="text-sm text-gray-700 mt-2">
+          Made with 💛 in India
+        </p>
+      </div>
+    </div>
+  
+    <div class="border-t border-gray-300 mt-12 pt-6 text-center text-sm text-gray-600">
+      © 2025 YELLO. All rights reserved.
+    </div>
+  </footer>
+
+  <!-- Theme Toggle Script -->
+<script>
+    const themeBtn = document.getElementById('theme-toggle');
+    let dark = false;
+  
+    themeBtn.addEventListener('click', () => {
+      document.body.classList.toggle('bg-white');
+      document.body.classList.toggle('bg-gray-900');
+      document.body.classList.toggle('text-white');
+      dark = !dark;
+      themeBtn.textContent = dark ? '☀️' : '🌙';
+    });
+  </script>
+
+</body>
+</html>

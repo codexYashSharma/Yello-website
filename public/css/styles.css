@@ -1,0 +1,62 @@
+body {
+    font-family: sans-serif;
+    padding: 20px;
+    background: #f9f9f9;
+  }
+  h1 {
+    color: #333;
+  }
+  button {
+    margin: 5px;
+    padding: 10px 20px;
+    background: #ffcd00;
+    border: none;
+    cursor: pointer;
+  }
+  .item-card {
+    border: 1px solid #ccc;
+    padding: 10px;
+    margin: 10px 0;
+    background: #fff;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+    
+  :root {
+    --light-bg: #fff;
+    --light-text: #000;
+    --dark-bg: #121212;
+    --dark-text: #f0f0f0;
+  }
+  
+  body.theme-light {
+    background-color: var(--light-bg);
+    color: var(--light-text);
+  }
+  
+  body.theme-dark {
+    background-color: var(--dark-bg);
+    color: var(--dark-text);
+  }
+  
+  header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+  }
+  
+  .form-container {
+    max-width: 400px;
+    margin: auto;
+    padding: 20px;
+  }
+  
+  input, button {
+    display: block;
+    width: 100%;
+    margin-bottom: 15px;
+    padding: 10px;
+  }
